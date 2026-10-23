@@ -1,6 +1,6 @@
 # NgHomepage
 
-This my R&D project utilizing the Angular web development framework via [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3. I may migrate my homepage to an Angular based framework vs developed in Pixi. TBD.
+This is my R&D project utilizing the Angular web development framework via [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3. I may migrate my homepage to an Angular based framework vs developed in Pixi. TBD.
 
 ## Development server
 
