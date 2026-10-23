@@ -6,7 +6,7 @@ Homepage.
 
 ---
 
-## About 
+## About
 
 This is my homepage repository.
 
@@ -32,12 +32,12 @@ http-server
 
 ---
 
-## References
+## References & License
 
 Original development
 - **HTML5 UP**: [HTML5 UP](https://html5up.net)
 - **Jacob Devasier**: [GitHub](https://github.com/JDevasier)
-- **License**: CC by 4.0 (updated CC), Creative Commons Attribution 3.0 ([View License](https://html5up.net/license))
+- **License**: Dual-Licensed: MIT (Code) / CC BY 4.0 (Design). See [LICENSE](LICENSE) file for full details. Original template by HTML5 UP under [CC BY 3.0](https://html5up.net).
 
 ### Resources
 
