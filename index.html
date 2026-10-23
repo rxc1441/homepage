@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
   <!--
-    Project Name: Webpage Template
-    Description: A webpage building template.
+    Project Name: Homepage
+    Description: Robert's homepage. Also doubles as a webpage development template.
 
-    This derivative work is based on jdevasier.gothub.io by Jacob Devasier,
+    This derivative work is based on jdevasier.github.io by Jacob Devasier,
     licensed under the Creative Commons Attribution 3.0 Unported License.
     https://github.com/JDevasier/jdevasier.github.io
 
@@ -13,11 +13,11 @@
   -->
 <html lang="en">
     <head>
-      <title>Homepage</title>
+      <title>Homepage | Robert Cocker</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <meta name="description" content="Masters student at Dakota State University. Data Science, Computer Science, Cybersecurity, Research, Development, and Engineering." />
-      <meta name="keywords" content="Robert Cocker, Data Science, Computer Science, Cybersecurity, Machine Learning, Deep Learning, Artifical Intelligence, Quantum Computing, Data Engineering, GitHub Homepage" />
+      <meta name="description" content="MS cyber defense candidate at Dakota State University. Data Science, Computer Science, Cybersecurity, Systems Architecture, and Engineering." />
+      <meta name="keywords" content="Robert Cocker, Cyber Defense, Dakota State University, Data Science, Computer Science, Machine Learning, Systems Architecture" />
 
       <!-- Favicons -->
       <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
@@ -31,9 +31,107 @@
       <link rel="manifest" href="/assets/favicon/site.webmanifest">
       <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#0b0b0b">
 
-      <!-- Stylesheets -->
+      <!-- Fonts & Stylesheets -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/main.css" />
       <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+      <!-- CSS Overrides for Dimension -->
+      <style>
+        :root {
+          --cyber-cyan: #00f2fe;
+          --cyber-green: #00ff66;
+          --cyber-amber: #ffa300;
+          --cyber-bg: #0d1117;
+          --cyber-border: #30363d;
+        }
+
+        body, input, select, textarea {
+          font-family: 'JetBrains Mono', monospace, sans-serif !important;
+        }
+
+	/* Terminal Prompt Badges */
+        .term-prompt {
+          color: var(--cyber-cyan);
+          font-weight: 700;
+        }
+        .term-badge {
+	  background: rgba(0, 242, 254, 0.1);
+	  border: 1px solid var(--cyber-cyan);
+	  color: var(--cyber-cyan);
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+
+        /* Project Cards inside Dimension Articles */
+        .project-card {
+          background: rgba(22, 27, 34, 0.8);
+          border: 1px solid var(--cyber-border);
+          border-left: 3px solid var(--cyber-cyan);
+          padding: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 4px;
+          transition: border-color 0.2s ease;
+        }
+        .project-card:hover {
+          border-color: var(--cyber-cyan);
+        }
+        .project-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 0.25rem;
+        }
+        .project-tech {
+          font-size: 0.75rem;
+          color: var(--cyber-amber);
+        }
+
+        /* GPG Key Section */
+        .gpg-box {
+          background: #161b22;
+          border: 1px dashed var(--cyber-border);
+          padding: 0.75rem;
+          font-size: 0.8rem;
+          color: #8b949e;
+          word-break: break-all;
+          margin-top: 1rem;
+        }
+
+        /* Footer and Links */
+        .cyber-cyan {
+          color: #ffffff;
+          text-decoration: none;
+          position: relative;
+          transition: color 0.5s ease;
+        }
+
+        .cyber-cyan::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 3px;
+          background-color: #00f2fe;
+          box-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe, 0 0 30px #00f2fe;
+          opacity: 0;
+          transition: opacity 1.5s ease, background-color 1.5s ease, box-shadow 1.5s ease;
+	}
+
+	.cyber-cyan:hover::after {
+	    opacity: 1;
+	}
+
+	.cyber-cyan:hover {
+          color: #00f2fe;
+        }
+      </style>
     </head>
     <body class="is-preload">
 
@@ -44,87 +142,141 @@
             <header id="header">
                 <div class="content">
                     <div class="inner">
-                        <h1>Robert Cocker</h1>
-                        <p>Master's Student | Dakota State University</p>
+                        <div class="term-badge">SYSTEM STATUS: ONLINE</div>
+                        <h1><span class="term-prompt">rxc1441@</span>Robert Cocker:~#</h1>
+                        <p>MS Cyber Defense Candidate | Dakota State University</p>
                     </div>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#intro">About Me</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#research">R&D</a></li>
                         <li><a href="#roadmap">Roadmap</a></li>
-                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="#technologies">Stack</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
 
-            <!-- Main -->
+	    <!-- Main -->
             <div id="main">
 
-                <!-- About Me -->
+                <!-- About -->
                 <article id="intro">
-                    <h3 class="major">About Me</h3>
-                    <p> 
-                       My name is Robert and I am an incoming master's student 
-                       at Dakota State University studying cyber defense.
-                    </p>
-                    <h3>Areas of Interest and Expertise</h3>
-                    <ul>
-		                <li>Computer Science and Cybersecurity.</li>
-                        <li>Data Science and Data Engineering.</li>
-                        <li>Quantum Science and Computing.</li>
-   			            <li>Domains in STEM.</li> 
-                    </ul>
-
-                    <h3>Goals</h3>
-                    <ul>
-                        <li>Contributing to innovative research and projects.</li>
-                        <li>Collaborating and working with cool people.</li>
-                        <li>Building something bigger than myself.</li>
-                    </ul>
-                </article>
-
-                <!-- Projects -->
-                <article id="projects">
-                    <h2 class="major">Projects</h2>
-                    <h3>Projects</h3>
-                    <ul>
-						<li><a href="https://gitlab.com/rcglpge/spt/" target="_blank">SPT</a> - My mini-project for building and testing various programming languages, frameworks, and technologies</li>
-                        <li><a href="https://github.com/lugnuts-at-UTA/LnOS" target="_blank">LNOS</a> - A Linux distribution based off of Arch Linux</li>
-						<li><a href="https://github.com/rcghpge/version-llm/" target="_blank">Version</a> - A large language model (LLM) and AI agent engine</li>
-                        <li><a href="https://github.com/rcghpge/pythondotorg/" target="_blank">Python.org</a> - The Python community's homepage python.org for the Python programming language</li>
-						<li><a href="https://github.com/rcghpge/modular" target="_blank">MAX + Mojo (Modular)</a> - Next generation distributed systems model serving framework and programming language for cutting edge technologies</li>
-						<li><a href="https://github.com/RamlaSuhra/team-claimforge" target="_blank">ClaimForge</a> - An AI agent developed for prior art discovery and patents (Google Cloud Hackathon)</li>
-						<li><a href="https://github.com/rcghpge/linux" target="_blank">Linux</a> - The Linux project and operating system kernel</li>
-						<li><a href="https://rcghpge.github.io/freebsd" target="_blank">FreeBSD</a> - The FreeBSD Project and operating system</li>
-		            </ul>
+                    <h2 class="major"><span class="term-prompt">#</span> About</h2>
                     <p>
-                        CV (outdated)<a href="/assets/Curriculum_Vitae.pdf" class="lightsaber-link" target="_blank" download> here. </a>
+                       My name is Robert and I am a MS cyber defense candidate at Dakota State University studying cyber defense.
                     </p>
+                    <h3>Focus Areas</h3>
+                    <ul>
+                      <li><strong>Cybersecurity & Defense:</strong> Security research, operating systems, personal computing, enterprise computing, cloud computing.</li>
+		      <li><strong>Machine Learning Engineering:</strong> ML R&D, distributed systems, DevSecOps, MLSecOps, and LLMSecOps.</li>
+                      <li><strong>Systems Architecture:</strong> Low-level Unix, Linux, and Windows systems R&D (Debian, ParrotOS, Arch Linux, FreeBSD, HardenedBSD).</li>
+                    </ul>
 
+                    <h3>Core Objectives</h3>
+                    <ul>
+                      <li>Advancing open-source systems research across Windows, Unix, and Linux distributions.</li>
+                      <li>Building resilient, privacy-first systems, and infrastructure tooling.</li>
+                      <li>R&D in applied data science, computer science, software engineering, and cybersecurity.</li>
+                    </ul>
+
+                    <div class="gpg-box">
+                      <strong>GPG Fingerprint:</strong><br>
+		      <code>E720 096E F4E8 AC80 5723  FB41 4B29 8099 1C61 137E</code>
+                    </div>
                 </article>
+
+		<!-- R&D -->
+                <article id="research">
+                    <h2 class="major"><span class="term-prompt">#</span> Research & Development</h2>
+
+                    <div class="project-card">
+                      <div class="project-title"><a href="https://github.com/rxc1441/modular" target="_blank">Mojo + MAX</a></div>
+		      <p>High performance systems programming language nad distributed model serving architecture.</p>
+                      <div class="project-tech">Modular | Mojo | MAX | Distributed Systems</div>
+                    </div>
+
+                    <div class="project-card">
+                      <div class="project-title"><a href="https://github.com/lugnuts-at-UTA/LnOS" target="_blank">LNOS</a></div>
+                      <p>A Linux distribution based off of Arch Linux developed for The University of Texas at Arlington.</p>
+                      <div class="project-tech">LNOS | Arch Linux | Linux | Operating Systems</div>
+                    </div>
+
+                    <div class="project-card">
+                      <div class="project-title"><a href="https://gitlab.com/rxc1441/spt/" target="_blank">SPT</a></div>
+                      <p>R&D project for evaluating language runtimes, memory safety, and frameworks.</p>
+                      <div class="project-tech">Programming Languages | Operating Systems | Systems Architectures </div>
+                    </div>
+
+		    <div class="project-card">
+		      <div class="project-title"><a href="https://github.com/RamlaSuhra/team-claimforge" target="_blank">ClaimForge</a></div>
+		      <p>AI agent pipeline developed for automated prior art discovery and patent analysis.</p>
+		      <div class="project-tech">Google Cloud | Hackathon | AI | ML | DL | NLP</div>
+		    </div>
+
+		    <div class="project-card">
+		      <div class="project-title"><a href="https://github.com/rxc1441/version-llm/" target="_blank">Version</a></div>
+		      <p>Large language model (LLM), AI agent, and containerized inference R&D project.</p>
+		      <div class="project-tech">Python | Google Gemini | OpenAI GPT | OCI Containers</div>
+		    </div>
+
+		    <h3>Open Source R&D</h3>
+		    <ul>
+		      <li><a href="https://github.com/rxc1441/pythondotorg/" target="_blank">Python.org</a></li>
+		      <li><a href="https://github.com/rxc1441/linux" target="_blank">Linux</a></li>
+		      <li><a href="https://www.parrotsec.org/" target="_blank">ParrotOS</a></li>
+		      <li><a href="https://hardenedbsd.org" target="_blank">HardenedBSD</a></li>
+		      <li><a href="https://rxc1441.github.io/freebsd/" target="_blank">FreeBSD</a></li>
+		    </ul>
+
+		    <p style="margin-top: 1rem;">
+		      <a href="/assets/Curriculum_Vitae.pdf" class="cyber-cyan" target="_blank" download>Curriculum Vitae (outdated)</a>
+		    </p>
+		</article>
 
                 <!-- Roadmap -->
                 <article id="roadmap">
-                    <h2 class="major">Roadmap</h2> 
-                  <section id="roadmap">
-                    <h3>Q4</h3>
-                    <ul class="roadmap-list">
-		        		<li>Prep for grad studies</li>
-                        <li>Research and develop (R&D) pretty cool technologies</li>
-						<li>Part-time or full-time role through grad studies</li>
-						<li>Holidays</li>
-                    </ul>
-                  </section>
+                    <h2 class="major"><span class="term-prompt">#</span> Roadmap</h2>
+                    <div class="project-card">
+                      <div class="project-title">Q4</div>
+                      <ul>
+			<li>Security R&D</li>
+                        <li>Graduate studies in Cyber Defense at DSU.</li>
+                        <li>Industry R&D/Cyber Defense + Cyber Operations role integration.</li>
+                        <li>Cyber events (CTFs) and hackathons.</li>
+			<li>Holidays</li>
+                      </ul>
+                    </div>
                 </article>
-		
-		    <!-- Contact -->
-    		<article id="contact">
-    		     <h2 class="major">Contact</h2>
-    		     <ul class="icons" style="padding-top:1rem;text-align:center">
+
+                <!-- Technologies -->
+                <article id="technologies">
+                    <h2 class="major"><span class="term-prompt">#</span> Tech Stack</h2>
+
+                    <h3>Operating Systems & Environments</h3>
+                    <p>Windows | Linux | BSD</p>
+
+                    <h3>Languages & Tooling</h3>
+                    <p>Python | C | C++ | R | SQL | Rust | Mojo | MATLAB | PowerShell | Bash | Almquist </p>
+
+                    <h3>Package & Environment Managers</h3>
+                    <p>WinGet | APT | Pacman | Pixi | Docker | OCI Containers</p>
+
+                    <h3>Development & System Tools</h3>
+                    <p>Vim | Emacs | VS Code | Spyder | RStudio | Scikit-Learn | TensorFlow | Keras </p>
+
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://github.com/rxc1441?tab=repositories" class="button" target="_blank">GitHub</a>
+                    </p>
+                </article>
+
+                <!-- Contact -->
+                <article id="contact">
+                    <h2 class="major"><span class="term-prompt">#</span> Contact</h2>
+                    <ul class="icons" style="padding-top:1rem;text-align:center">
                          <li>
-                             <a href="https://github.com/rcghpge" target="_blank" class="icon brands fa-github fa-3x" style="height:6.75rem;line-height:6.75rem;width:6.75rem">
+                             <a href="https://github.com/rxc1441" target="_blank" class="icon brands fa-github fa-3x" style="height:6.75rem;line-height:6.75rem;width:6.75rem">
                                  <span class="label">GitHub</span>
                              </a>
                          </li>
@@ -140,40 +292,17 @@
                          </li>
                      </ul>
                 </article>
-		
-                <!-- Technologies -->
-                <article id="technologies">
-                    <h2 class="major">Technologies</h2>
-                    <h3>Pretty Cool Technologies</h3>
-                    <ul>
-                        <li><a href="https://kde.org/plasma-desktop/" target="_blank">KDE Plasma Desktop</a> - Versatile, customizable desktop environment</li>
-                        <li><a href="https://scikit-learn.org/stable/" target="_blank">Scikit-Learn</a> - Python's gold-standard library for machine learning</li>
-                        <li><a href="https://keras.io/" target="_blank">Keras</a> - Simple, flexible, and powerful deep learning for human beings.</li>
-                        <li><a href="https://www.python.org/" target="_blank">Python</a> - Versatile, readable, high-level programming language</li>
-						<li><a href="https://www.c-language.org/ target="_blank">C</a> - General-purpose high-level programming language</li>
-                        <li>Command Line - <a href="https://www.in-ulm.de/~mascheck/various/ash/" target="_blank">Ash Shell</a> + 
-                        <a href="https://www.gnu.org/software/bash/" target="_blank">Bash Shell</a> + <a href="https://learn.microsoft.com/en-us/powershell/" target="_blank">PowerShell</a></li>
-                        <li>Package Managers - <a href="https://learn.microsoft.com/en-us/windows/package-manager/" target="_blank">WinGet</a> + <a href="https://pixi.prefix.dev/latest/" target="_blank">Pixi</a> 
-                        + <a href="https://wiki.debian.org/AptCLI" target="_blank">APT</a> + <a href="https://pacman.archlinux.page/" target="_blank">Pacman</a></li>
-                        <li>Operating Systems - <a href="https://www.microsoft.com/en-us/windows" target="_blank">Windows</a> + The <a href="https://www.opengroup.org/membership/forums/platform/unix" target="_blank">UNIX</a> standard</a> + <a href="https://www.kernel.org" target="_blank">Linux</a></li> 
-                        <li>Text Editors/IDEs - <a href="https://www.nano-editor.org/" target="_blank">Nano</a> + <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a>
-                        + <a href="https://www.vim.org/" target="_blank">Vim</a> + <a href="https://posit.co/download/rstudio-desktop/" target="_blank">RStudio</a> + 
-                        <a href="https://www.spyder-ide.org/" target="_blank">Spyder</a> + others</li>
-                        <li>Productivity Suite - <a href="https://www.microsoft.com/en/microsoft-365/products-apps-services" target="_blank">Microsoft 365</a> + others</li>
-                    </ul>
-                    <p>
-                        GitHub → <a href="https://github.com/rcghpge?tab=repositories" class="lightsaber-link" target="_blank">  Codebase, projects & contributions</a> 
-                    </p>
-                </article>
+
             </div>
-            <!-- Footer -->
+
+	    <!-- Footer -->
             <footer id="footer">
               <p>
                 &copy;
-                <a href="https://youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1&mute=1" target="_blank" class="lightsaber-link" id="year">
+                <a href="https://youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1&mute=1" target="_blank" class="cyber-cyan" id="year">
                   2024-{{ "now" | date: "%Y" }}
                 </a>
-                Robert Cocker
+                Robert Cocker. Built with HTML5 UP Dimension & Custom Cyber Mod.
               </p>
             </footer>
         </div>
@@ -188,7 +317,7 @@
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
 
-        <!-- Footer year -->
+        <!-- Dynamic Year Script -->
         <script>
           const startYear = 2024;
           const currentYear = new Date().getFullYear();

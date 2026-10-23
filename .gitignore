@@ -1,6 +1,9 @@
 # Exclude
 *.bak
+*.md~
+*.html~
 *.pixi/*
+dev/
 
 # Except
 !.pixi/config.toml
