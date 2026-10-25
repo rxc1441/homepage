@@ -46,6 +46,7 @@ Original development
 - **Tools**:
   - [Pixi](https://prefix-dev.github.io/pixi/v0.62.2/)
   - [Nano](https://www.nano-editor.org/)
+  - [Emacs](https://www.gnu.org/software/emacs/)
   - [Python](https://www.python.org/)
   - [Node.js/npm](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
   - [VS Code](https://code.visualstudio.com/)
