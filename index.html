@@ -1,4 +1,4 @@
-/<!doctype html>
+<!doctype html>
 <!--
     Project Name: Homepage
     Description: Robert's homepage. Also doubles as a webpage development template.
@@ -59,110 +59,137 @@
 
     <!-- CSS Overrides for Dimension -->
     <style>
-            :root {
-              --cyber-blue: #00a9e0;
-              --cyber-green: #00ff66;
-              --cyber-amber: #ffa300;
-              --cyber-bg: #0d1117;
-              --cyber-border: #30363d;
-            }
+      :root {
+        --cyber-blue: #00a9e0;
+        --cyber-green: #00ff66;
+        --cyber-amber: #ffa300;
+        --cyber-bg: #0d1117;
+        --cyber-border: #30363d;
+      }
 
-            body,
-            input,
-            select,
-            textarea {
-              font-family: 'JetBrains Mono', monospace, sans-serif !important;
-            }
+      body,
+      input,
+      select,
+      textarea {
+        font-family: 'JetBrains Mono', monospace, sans-serif !important;
+      }
 
-            /* Terminal Prompt Badges */
-            .term-prompt {
-              color: var(--cyber-blue);
-              font-weight: 700;
-            }
-            .term-badge {
-              background: rgba(0, 242, 254, 0.1);
-              border: 1px solid var(--cyber-blue);
-              color: var(--cyber-blue);
-              padding: 2px 8px;
-              border-radius: 4px;
-              font-size: 0.8rem;
-              display: inline-block;
-              margin-bottom: 0.5rem;
-            }
+      /* 3D Swarm Canvas */
+      #swarm-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-            /* Project Cards inside Dimension Articles */
-            .project-card {
-              background: rgba(22, 27, 34, 0.8);
-              border: 1px solid var(--cyber-border);
-              border-left: 3px solid var(--cyber-blue);
-              padding: 1rem;
-              margin-bottom: 1rem;
-              border-radius: 4px;
-              transition: border-color 0.2s ease;
-            }
-            .project-card:hover {
-              border-color: var(--cyber-blue);
-            }
-            .project-title {
-              font-size: 1.1rem;
-              font-weight: 700;
-              color: #ffffff;
-              margin-bottom: 0.25rem;
-            }
-            .project-tech {
-              font-size: 0.75rem;
-              color: var(--cyber-amber);
-            }
+      #wrapper {
+        position: relative;
+        z-index: 2;
+      }
 
-            /* GPG Key Section */
-            .gpg-box {
-              background: #161b22;
-              border: 1px dashed var(--cyber-border);
-              padding: 0.75rem;
-              font-size: 0.8rem;
-              color: #8b949e;
-              word-break: break-all;
-              margin-top: 1rem;
-            }
+      #bg {
+        z-index: 0 !important;
+        opacity: 0.35 !important;
+      }
 
-            /* Footer and Links */
-            .cyber-blue {
-              color: #ffffff;
-              text-decoration: none;
-              position: relative;
-              transition: color 0.5s ease;
-            }
+      #bg::before,
+      #bg::after {
+        opacity: 0.35 !important;
+      }
 
-            .cyber-blue::after {
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: -1px;
-              width: 100%;
-              height: 3px;
-              background-color: #00a9e0;
-              box-shadow:
-                0 0 10px #00a9e0,
-                0 0 20px #00a9e0,
-                0 0 30px #00a9e0;
-              opacity: 0;
-              transition:
-                opacity 1.5s ease,
-                background-color 1.5s ease,
-                box-shadow 1.5s ease;
-            }
+      /* Terminal Prompt Badges */
+      .term-prompt {
+        color: var(--cyber-blue);
+        font-weight: 700;
+      }
+      .term-badge {
+        background: rgba(0, 242, 254, 0.1);
+        border: 1px solid var(--cyber-blue);
+        color: var(--cyber-blue);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
 
-            .cyber-blue:hover::after {
-              opacity: 3;
-            }
+      /* Project Cards inside Dimension Articles */
+      .project-card {
+        background: rgba(22, 27, 34, 0.8);
+        border: 1px solid var(--cyber-border);
+        border-left: 3px solid var(--cyber-blue);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        transition: border-color 0.2s ease;
+      }
+      .project-card:hover {
+        border-color: var(--cyber-blue);
+      }
+      .project-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.25rem;
+      }
+      .project-tech {
+        font-size: 0.75rem;
+        color: var(--cyber-amber);
+      }
 
-            .cyber-blue:hover {
-              color: #00a9e0;
-            }
-      -->
+      /* GPG Key Section */
+      .gpg-box {
+        background: #161b22;
+        border: 1px dashed var(--cyber-border);
+        padding: 0.75rem;
+        font-size: 0.8rem;
+        color: #8b949e;
+        word-break: break-all;
+        margin-top: 1rem;
+      }
+
+      /* Footer and Links */
+      .cyber-blue {
+        color: #ffffff;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.5s ease;
+      }
+
+      .cyber-blue::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 3px;
+        background-color: #00a9e0;
+        box-shadow:
+          0 0 10px #00a9e0,
+          0 0 20px #00a9e0,
+          0 0 30px #00a9e0;
+        opacity: 0;
+        transition:
+          opacity 1.5s ease,
+          background-color 1.5s ease,
+          box-shadow 1.5s ease;
+      }
+
+      .cyber-blue:hover::after {
+        opacity: 3;
+      }
+
+      .cyber-blue:hover {
+        color: #00a9e0;
+      }
     </style>
   </head>
   <body class="is-preload">
+    <!-- Background Canvas -->
+    <canvas id="swarm-canvas"></canvas>
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
@@ -417,13 +444,164 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Dynamic Year Script -->
+    <!-- Dynamic Year -->
     <script>
       const startYear = 2024;
       const currentYear = new Date().getFullYear();
       const yearEl = document.getElementById('year');
       yearEl.textContent =
         startYear === currentYear ? String(startYear) : `${startYear}-${currentYear}`;
+    </script>
+
+    <!-- Lattice Sphere -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+      (function () {
+        const canvas = document.getElementById('swarm-canvas');
+        if (!canvas) return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          60,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+        camera.position.z = 4.8;
+
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const PARTICLE_COUNT = 2200;
+        const SPHERE_RADIUS = 2.1;
+        const geometry = new THREE.BufferGeometry();
+        const staticPos = new Float32Array(PARTICLE_COUNT * 3);
+        const currentPos = new Float32Array(PARTICLE_COUNT * 3);
+        const colors = new Float32Array(PARTICLE_COUNT * 3);
+
+        // School Colors (RGB normalized 0.0 - 1.0)
+        const colorBlue = new THREE.Color(0x004165);
+        const colorCyan = new THREE.Color(0x00a9e0);
+        const colorGold = new THREE.Color(0xffc72c);
+
+        const phi = Math.PI * (3 - Math.sqrt(5));
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          const y = 1 - (i / (PARTICLE_COUNT - 1)) * 2;
+          const radiusAtY = Math.sqrt(1 - y * y);
+          const theta = phi * i;
+
+          const x = Math.cos(theta) * radiusAtY * SPHERE_RADIUS;
+          const yPos = y * SPHERE_RADIUS;
+          const z = Math.sin(theta) * radiusAtY * SPHERE_RADIUS;
+
+          staticPos[i * 3] = x;
+          staticPos[i * 3 + 1] = yPos;
+          staticPos[i * 3 + 2] = z;
+
+          currentPos[i * 3] = x;
+          currentPos[i * 3 + 1] = yPos;
+          currentPos[i * 3 + 2] = z;
+
+          colors[i * 3] = colorBlue.r;
+          colors[i * 3 + 1] = colorBlue.g;
+          colors[i * 3 + 2] = colorBlue.b;
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(currentPos, 3));
+        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+        const material = new THREE.PointsMaterial({
+          size: 0.035,
+          vertexColors: true,
+          transparent: true,
+          opacity: 0.9,
+          blending: THREE.AdditiveBlending,
+        });
+
+        const latticeMesh = new THREE.Points(geometry, material);
+        scene.add(latticeMesh);
+
+        const mouse = new THREE.Vector2(-999, -999);
+        const targetMouse = new THREE.Vector2(-999, -999);
+        const raycaster = new THREE.Raycaster();
+
+        window.addEventListener('mousemove', (e) => {
+          targetMouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+          targetMouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+          requestAnimationFrame(animate);
+          const elapsed = clock.getElapsedTime();
+
+          mouse.x += (targetMouse.x - mouse.x) * 0.08;
+          mouse.y += (targetMouse.y - mouse.y) * 0.08;
+
+          raycaster.setFromCamera(mouse, camera);
+          const mouse3D = new THREE.Vector3();
+          raycaster.ray.at(camera.position.z - 0.5, mouse3D);
+
+          latticeMesh.rotation.y = elapsed * 0.06;
+          latticeMesh.rotation.x = elapsed * 0.02;
+
+          const posAttr = geometry.attributes.position;
+          const colAttr = geometry.attributes.color;
+          const posArr = posAttr.array;
+          const colArr = colAttr.array;
+
+          for (let i = 0; i < PARTICLE_COUNT; i++) {
+            const idx = i * 3;
+            const ox = staticPos[idx];
+            const oy = staticPos[idx + 1];
+            const oz = staticPos[idx + 2];
+
+            const worldPos = new THREE.Vector3(ox, oy, oz).applyMatrix4(latticeMesh.matrixWorld);
+            const dist = worldPos.distanceTo(mouse3D);
+            const effectRadius = 1.8;
+
+            let targetX = ox;
+            let targetY = oy;
+            let targetZ = oz;
+
+            if (dist < effectRadius) {
+              // Magnetic bulge towards cursor + color shift to DSU Cyan/Gold
+              const factor = 1 - dist / effectRadius;
+              const pullDir = mouse3D.clone().sub(worldPos).normalize();
+
+              targetX += pullDir.x * factor * 0.4;
+              targetY += pullDir.y * factor * 0.4;
+              targetZ += pullDir.z * factor * 0.4;
+
+              colArr[idx] = THREE.MathUtils.lerp(colorBlue.r, colorCyan.r, factor);
+              colArr[idx + 1] = THREE.MathUtils.lerp(colorBlue.g, colorCyan.g, factor);
+              colArr[idx + 2] = THREE.MathUtils.lerp(colorBlue.b, colorGold.b, factor);
+            } else {
+              colArr[idx] = THREE.MathUtils.lerp(colArr[idx], colorBlue.r, 0.05);
+              colArr[idx + 1] = THREE.MathUtils.lerp(colArr[idx + 1], colorBlue.g, 0.05);
+              colArr[idx + 2] = THREE.MathUtils.lerp(colArr[idx + 2], colorBlue.b, 0.05);
+            }
+
+            posArr[idx] += (targetX - posArr[idx]) * 0.1;
+            posArr[idx + 1] += (targetY - posArr[idx + 1]) * 0.1;
+            posArr[idx + 2] += (targetZ - posArr[idx + 2]) * 0.1;
+          }
+
+          posAttr.needsUpdate = true;
+          colAttr.needsUpdate = true;
+          renderer.render(scene, camera);
+        }
+
+        animate();
+        window.addEventListener('resize', () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+      })();
     </script>
   </body>
 </html>
