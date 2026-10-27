@@ -4,6 +4,7 @@
 *.html~
 *.pixi/*
 dev/
+node_modules/
 
 # Except
 !.pixi/config.toml

@@ -7,42 +7,45 @@
 /* Footer */
 
 #footer {
-	@include vendor('transition', (
-		'transform #{_duration(article)} ease-in-out',
-		'filter #{_duration(article)} ease-in-out',
-		'opacity #{_duration(article)} ease-in-out'
-	));
-	width: 100%;
-	max-width: 100%;
-	
-	// === STICKY FOOTER ===
-	margin-top: auto !important;
-	flex-shrink: 0 !important;
-	
-	// === VISUAL CONFIRMATION ===
-	border-top: 4px solid #ffd700 !important;  // GOLD LINE
-	background: rgba(255,255,255,0.08) !important;  // BACKGROUND
-	padding: 3rem 0 4rem 0 !important;  // EXTRA SPACE
-	box-shadow: 0 -8px 30px rgba(0,0,0,0.7) !important;  // SHADOW
-	
-	text-align: center;
+  @include vendor(
+    'transition',
+    (
+      'transform #{_duration(article)} ease-in-out',
+      'filter #{_duration(article)} ease-in-out',
+      'opacity #{_duration(article)} ease-in-out'
+    )
+  );
+  width: 100%;
+  max-width: 100%;
 
-	.copyright {
-		letter-spacing: _font(letter-spacing);
-		font-size: 1.2rem !important;  // BIGGER
-		opacity: 1 !important;
-		margin-bottom: 0;
-		text-transform: uppercase;
-		color: #ffd700 !important;  // GOLD TEXT
-	}
+  // === STICKY FOOTER ===
+  margin-top: auto !important;
+  flex-shrink: 0 !important;
 
-	body.is-article-visible & {
-		@include vendor('transform', 'scale(0.95)');
-		@include vendor('filter', 'blur(0.1rem)');
-		opacity: 0;
-	}
+  // === VISUAL CONFIRMATION ===
+  border-top: 4px solid #ffd700 !important; // GOLD LINE
+  background: rgba(255, 255, 255, 0.08) !important; // BACKGROUND
+  padding: 3rem 0 4rem 0 !important; // EXTRA SPACE
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.7) !important; // SHADOW
 
-	body.is-preload & {
-		opacity: 0;
-	}
+  text-align: center;
+
+  .copyright {
+    letter-spacing: _font(letter-spacing);
+    font-size: 1.2rem !important; // BIGGER
+    opacity: 1 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #ffd700 !important; // GOLD TEXT
+  }
+
+  body.is-article-visible & {
+    @include vendor('transform', 'scale(0.95)');
+    @include vendor('filter', 'blur(0.1rem)');
+    opacity: 0;
+  }
+
+  body.is-preload & {
+    opacity: 0;
+  }
 }

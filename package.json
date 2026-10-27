@@ -1,0 +1,24 @@
+{
+  "name": "rxc1441.github.io",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@html-eslint/eslint-plugin": "^0.67.0",
+    "@html-eslint/parser": "^0.67.0",
+    "eslint-config-prettier": "^10.1.8",
+    "stylelint": "^17.16.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript-eslint": "^8.72.0"
+  }
+}
