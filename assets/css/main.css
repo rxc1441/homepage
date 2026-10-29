@@ -1614,9 +1614,7 @@ body.is-preload #header .content .inner {
 /* Easter Egg */
 .trojan-blue {
   color: #fff;
-  display: inline-block;
   text-decoration: none;
-  position: relative;
   transition: color 0.5s ease;
 }
 
