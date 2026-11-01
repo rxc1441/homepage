@@ -1536,7 +1536,7 @@ body.is-preload #header .content .inner {
     transform 0.325s ease-in-out;
   padding: 4.5rem 2.5rem 1.5rem;
   position: relative;
-  width: 100%;
+  width: 40rem;
   max-width: 100%;
   background-color: rgb(27 31 34 / 85%);
   border-radius: 4px;
