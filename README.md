@@ -46,9 +46,10 @@ Original development
 - **Demo Images**: [Unsplash](https://unsplash.com)
 - **Icons**: [Font Awesome](https://fontawesome.com)
 - **Tools**:
+  - [Copilot](https://copilot.com/)
+  - [VS Code](https://code.visualstudio.com/)
   - [Python](https://www.python.org/)
   - [Node.js/npm](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
-  - [VS Code](https://code.visualstudio.com/)
   - [Nano](https://www.nano-editor.org/)
   - [Pixi](https://prefix-dev.github.io/pixi/v0.62.2/)
   - [Emacs](https://www.gnu.org/software/emacs/)
