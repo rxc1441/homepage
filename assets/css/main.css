@@ -1508,7 +1508,7 @@ body.is-preload #header .content .inner {
   flex-grow: 1;
   flex-shrink: 1;
   display: -moz-flex;
-  display: flex !important;
+  display: flex;
   display: -ms-flex;
   align-items: center !important;
   justify-content: center !important;
@@ -1680,8 +1680,9 @@ body.is-preload #header .content .inner {
     opacity 0.325s ease-in-out;
   width: 100%;
   max-width: 100%;
-  margin-top: auto !important; /* auto|2rem */
-  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); 
+  margin-top: auto;
+  flex-shrink: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   text-align: center;
 }
 
