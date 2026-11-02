@@ -1680,8 +1680,8 @@ body.is-preload #header .content .inner {
 /* Courses Section */
 #course-list .course-list {
   list-style-type: disc;
-  margin-left: 20px; 
-  line-height: 1.6; 
+  margin-left: 20px;
+  line-height: 1.6;
 }
 
 .course-list li {

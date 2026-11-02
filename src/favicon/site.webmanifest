@@ -1,6 +1,6 @@
 {
-  "name": "Robert Cocker",
-  "short_name": "WebPage",
+  "name": "Homepage",
+  "short_name": "Homepage",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
