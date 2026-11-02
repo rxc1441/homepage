@@ -172,12 +172,33 @@ textarea {
 
 html {
   box-sizing: border-box;
+  scrollbar-color: #00a9e0 #0d1117;
+  scrollbar-width: thin;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #00a9e0;
+  border: 2px solid #0d1117;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
 }
 
 body {
@@ -1787,7 +1808,7 @@ body.is-preload #footer {
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-#main article.visible {
+#main article.active.visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
