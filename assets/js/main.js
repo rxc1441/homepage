@@ -186,7 +186,7 @@
       $body.addClass('is-switching');
 
       // Deactivate article.
-      $article.removeClass('active');
+      $article.removeClass('active visible revealed');
 
       // Hide article, main.
       $article.hide();
@@ -215,7 +215,7 @@
     locked = true;
 
     // Deactivate article.
-    $article.removeClass('active');
+    $article.removeClass('active visible revealed');
 
     // Hide article.
     setTimeout(function () {
