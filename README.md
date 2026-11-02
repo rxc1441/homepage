@@ -46,12 +46,13 @@ Original development
 - **Demo Images**: [Unsplash](https://unsplash.com)
 - **Icons**: [Font Awesome](https://fontawesome.com)
 - **Tools**:
-  - [Copilot](https://copilot.com/)
-  - [VS Code](https://code.visualstudio.com/)
-  - [Python](https://www.python.org/)
-  - [Node.js/npm](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
-  - [Nano](https://www.nano-editor.org/)
-  - [Pixi](https://prefix-dev.github.io/pixi/v0.62.2/)
-  - [Emacs](https://www.gnu.org/software/emacs/)
+  - <a href="https://copilot.com/" target="_blank" rel="noopener noreferrer">Copilot</a>
+  - <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code</a>
+  - <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a>
+  - <a href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager" target="_blank" rel="noopener noreferrer">Node.js/NPM</a>
+  - <a href="https://pnpm.io/" target="_blank" rel="noopender noreferrer">PNPM</a>
+  - <a href="https://www.nano-editor.org/" target="_blank" rel="noopener noreferrer">Nano</a>
+  - <a href="https://prefix-dev.github.io/pixi/v0.62.2/" target="_blank" rel="noopener noreferrer">Pixi</a>
+  - <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener noreferrer">Emacs</a>
 
 ---
