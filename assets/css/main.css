@@ -172,7 +172,7 @@ textarea {
 
 html {
   box-sizing: border-box;
-  scrollbar-color: #00a9e0 #30363d;
+  scrollbar-color: #00a9e0 #1b1f22d9;
   scrollbar-width: thin;
 }
 
@@ -188,12 +188,12 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-  background: #30363d;
+  background: #1b1f22d9;
 }
 
 *::-webkit-scrollbar-thumb {
   background: #00a9e0;
-  border: 2px solid #30363d;
+  border: 2px solid #1b1f22d9;
   border-radius: 999px;
 }
 
