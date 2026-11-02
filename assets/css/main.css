@@ -188,12 +188,12 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-  background: #0d1117;
+  background: #30363d;
 }
 
 *::-webkit-scrollbar-thumb {
   background: #00a9e0;
-  border: 2px solid #0d1117;
+  border: 2px solid #30363d;
   border-radius: 999px;
 }
 
